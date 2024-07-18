@@ -6,7 +6,7 @@ import { FaMoon } from 'react-icons/fa';
 
 const Header = () => {
   const path = useLocation().pathname;
-  
+
   return (
     <Navbar className='border-b-2'>
       <Link
@@ -39,15 +39,19 @@ const Header = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link active={path === "/"} as={'div'}>
+
+        <Navbar.Link as={Link} to="/" active={path === "/"}>
           <Link to='/'>Home</Link>
         </Navbar.Link>
-        <Navbar.Link active={path === "/about"} as={'div'}>
+        <Navbar.Link as={Link} to="/about" active={path === "/about"}>
           <Link to='/about'>About</Link>
         </Navbar.Link>
-        <Navbar.Link active={path === "/projects"} as={'div'}>
+        <Navbar.Link as={Link} to="/projects" active={path === "/projects"}>
           <Link to='/projects'>Projects</Link>
         </Navbar.Link>
+
+
+        
       </Navbar.Collapse>
     </Navbar>
   )
