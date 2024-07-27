@@ -445,8 +445,7 @@ export default function DashProfile() {
           outline
           disabled={loading || imageFileUploading}
         >
-          {loading ? 'Loading...' : 'Update'}
-          Update
+          {loading ? 'Loading...' : 'Update'}          
         </Button>
         {currentUser.isAdmin && (
           <Link to={'/create-post'}>
